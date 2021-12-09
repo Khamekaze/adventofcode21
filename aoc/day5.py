@@ -31,6 +31,8 @@ def calculate_lines(coordinate_nodes):
         if n.vals[0] == n.vals[2] or n.vals[1] == n.vals[3]:
             nodes.append(n)
 
+    return nodes
+
 
 
 def create_coordinates_nodes(lines):
@@ -63,5 +65,4 @@ def read_input():
 if __name__ == '__main__':
     lines = read_input()
     coordinates = create_coordinates_nodes(lines)
-    calculate_lines(coordinates)
-    print(lines)
+    line_nodes = calculate_lines(coordinates)
